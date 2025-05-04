@@ -1,25 +1,44 @@
-<dependencies>
-  <dependency>
-    <groupId>org.junit.jupiter</groupId>
-    <artifactId>junit-jupiter</artifactId>
-    <version>5.9.3</version>
-    <scope>test</scope>
-  </dependency>
-</dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-<build>
-  <plugins>
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-surefire-plugin</artifactId>
-      <version>3.0.0-M9</version>
-    </plugin>
+  <modelVersion>4.0.0</modelVersion>
 
-    <!-- Sonar Plugin -->
-    <plugin>
-      <groupId>org.sonarsource.scanner.maven</groupId>
-      <artifactId>sonar-maven-plugin</artifactId>
-      <version>4.0.0.4121</version>
-    </plugin>
-  </plugins>
-</build>
+  <groupId>com.javatpoint.application1</groupId>
+  <artifactId>my-application1</artifactId>
+  <version>1.0</version>
+  <packaging>jar</packaging>
+
+  <name>My Application 1</name>
+  <url>http://maven.apache.org</url>
+
+  <dependencies>
+    <!-- JUnit 5 for Unit Testing -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>5.9.3</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <!-- Surefire Plugin to Run JUnit 5 Tests -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M9</version>
+      </plugin>
+
+      <!-- SonarQube Scanner Plugin (optional) -->
+      <plugin>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>4.0.0.4121</version>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
